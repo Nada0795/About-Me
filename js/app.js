@@ -77,3 +77,44 @@ if(n5==='yes'){
 else{
     alert('Ok, Good Bye')
 }
+
+let numUser = prompt(' Write The Code Please');
+numUser=Number(numUser);
+for ( let x=1; x<4 ; x++) {
+    
+if(numUser===4){
+    alert('This Is The Correct Code');
+ break;
+}
+
+else if(numUser<4){
+    alert('too low');
+numUser=prompt('please try again');
+}
+else if (numUser>4){
+    alert('too high');
+    numUser=prompt('please try again');
+}
+if (x==3){
+    alert('You finished your attempts, The Correct Code Is 4');
+}
+}
+
+
+let userCode = prompt('which tag we use to structure the web ? ');
+userCode=userCode.toLocaleLowerCase();
+let myCode=['style','script','html','structure'];
+
+for(x=0;x!==4;x++){
+
+if(userCode===myCode[2]){
+    alert('Correct Answer');
+    break;
+}
+else{
+    alert=('Try Again');
+    x++;
+}
+
+}
+alert(userCode+' your score is '+x);
