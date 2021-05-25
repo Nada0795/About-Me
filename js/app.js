@@ -101,20 +101,29 @@ if (x==3){
 }
 
 
-let userCode = prompt('which tag we use to structure the web ? ');
-userCode=userCode.toLocaleLowerCase();
-let myCode=['style','script','html','structure'];
 
-for(x=0;x!==4;x++){
 
-if(userCode===myCode[2]){
-    alert('Correct Answer');
+let userCar = prompt('Guess what is my favorite car ?');
+userCar=userCar.toLocaleLowerCase();
+let myCar=['toyota','lexus','bmw','ford','mercedes','kia'];
+
+
+for(let index=0;index < myCar.length;index++){
+
+if(userCar===myCar[4]){
+    alert('Correct Answer,My Favorite Car Is mercedes');
     break;
 }
-else{
+else if (userCar!==myCar[4]){
     alert=('Try Again');
-    x++;
+    userCar = prompt('Guess what is my favorite car ?');
+    
 }
 
 }
-alert(userCode+' your score is '+x);
+
+if(index==myCar.length){
+    alert('You finished your attempts, The Correct Answer Is mercedes');
+    
+}
+alert(userCode+' your score is '+userCar);
