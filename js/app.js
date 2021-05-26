@@ -1,25 +1,19 @@
-// Questions 
-// Do you want to learn a new skills?
-// do you have the ability to work under pressure ? 
-// Do you like programming??
-// Do you want to be software developer?
-// Are you ready to start with our course ?
-
-
-
 'use strict';
 
-let n1 = prompt ('Do you want to learn a new skills ?' );
+let score=0;
+
+function firstFiveQuest(){
+let n1 = prompt ('Did I study network engineering ?' );
 n1=n1.toLowerCase();
 
 if (n1==='yes' || n1==='y'){
 
-    alert ('Good');
+    alert ('you are correct !');
+    score++;
 
 }
-else if (n1==='no'){
-    n1=n1.toUpperCase();
-    console.log(n1);
+else if (n1 ==='no' || n1 === 'n'){
+    alert('You are wrong !');
 }
 else{
     alert('you should select yes or no !!');
@@ -78,52 +72,63 @@ else{
     alert('Ok, Good Bye')
 }
 
-let numUser = prompt(' Write The Code Please');
-numUser=Number(numUser);
-for ( let x=1; x<4 ; x++) {
+}
+
+
+function numberGuess(){
+for ( let x=1; x<=4 ; x++) {
+
+ let numUser = prompt(' Guess The Number Please ? hint:the number is between 0-10');
+ numUser=Number(numUser);
     
-if(numUser===4){
-    alert('This Is The Correct Code');
- break;
-}
-
-else if(numUser<4){
+ if(numUser === 4){
+    alert('This Is The Correct Number');
+    score++;
+    break;
+ }
+ else if(numUser < 4){
     alert('too low');
-numUser=prompt('please try again');
-}
-else if (numUser>4){
+ }
+ else if (numUser > 4){
     alert('too high');
-    numUser=prompt('please try again');
+ }
+
+ if (x === 4){
+    alert('You finished your attempts, The Correct Number Is 4');
+ }
 }
-if (x==3){
-    alert('You finished your attempts, The Correct Code Is 4');
-}
+
 }
 
 
 
-
-let userCar = prompt('Guess what is my favorite car ?');
-userCar=userCar.toLocaleLowerCase();
+function guessCar(){
 let myCar=['toyota','lexus','bmw','ford','mercedes','kia'];
 
 
-for(let index=0;index < myCar.length;index++){
+for(let index=0 ; index < 6 ; index++){ //attempts
 
-if(userCar===myCar[4]){
-    alert('Correct Answer,My Favorite Car Is mercedes');
+    let userCar = prompt('Guess what is my favorite cars ?');
+    userCar=userCar.toLocaleLowerCase();
+
+    if(userCar === myCar[1] || userCar === myCar[2] || userCar === myCar[4]){
+    alert('Correct Answer');
+    score++;
     break;
-}
-else if (userCar!==myCar[4]){
-    alert=('Try Again');
-    userCar = prompt('Guess what is my favorite car ?');
+    }
     
-}
+    if(index === 5){
+    alert('You finished your attempts, The Correct Answer Is ' + myCar[1] + ' ,' + myCar[2] + ' ,' + myCar[4]);
+    }
 
 }
 
-if(index==myCar.length){
-    alert('You finished your attempts, The Correct Answer Is mercedes');
-    
 }
-alert(userCode+' your score is '+userCar);
+
+
+
+firstFiveQuest();
+numberGuess();
+guessCar();
+
+alert('your score is '+ score);
