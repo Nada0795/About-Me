@@ -2,7 +2,7 @@
 
 let score=0;
 
-
+function firstFiveQuest(){
 let n1 = prompt ('Did I study network engineering ?' );
 n1=n1.toLowerCase();
 
@@ -72,8 +72,10 @@ else{
     alert('Ok, Good Bye')
 }
 
+}
 
 
+function numberGuess(){
 for ( let x=1; x<=4 ; x++) {
 
  let numUser = prompt(' Guess The Number Please ? hint:the number is between 0-10');
@@ -96,10 +98,11 @@ for ( let x=1; x<=4 ; x++) {
  }
 }
 
+}
 
 
 
-
+function guessCar(){
 let myCar=['toyota','lexus','bmw','ford','mercedes','kia'];
 
 
@@ -120,5 +123,12 @@ for(let index=0 ; index < 6 ; index++){ //attempts
 
 }
 
-alert('your score is '+ score);
+}
 
+
+
+firstFiveQuest();
+numberGuess();
+guessCar();
+
+alert('your score is '+ score);
