@@ -1,24 +1,77 @@
 
 
      h2 {
-         color: #ba135d;
+         color: yellow;
          font-size: 30px;
+         margin: 20px;
+         padding: 3px;
+        margin-left: 5px;
+
      }
 
 
 
      hr {
-         width: 200px;
-         color: #064420;
+         width: 600px;
+         color: black;
          border-style: dotted none none;
          border-width: 5px;
+      margin: 30px;
+      margin-left: 580px;
      }
 
      p {
          font-size: 30px;
+         letter-spacing: 1px;
+         word-spacing: 3px;
+         color: #005792;
+         margin-left: 5px;
+         margin: 50px;
      }
 
      ul li {
 
-         font-size: 20px;
+         font-size: 30px;
      }
+
+mark{
+    font-size: x-large;
+    color: black;
+}
+
+ol{
+    color: #005792;
+    /* word-spacing:3px ; */
+    letter-spacing: 1px;
+    line-height: 200%;
+    /* padding-left: 8px; */
+    margin: 0;
+    
+}
+
+ol {
+
+    font-size: 30px;
+}
+
+a {
+    margin-left: 900px;
+}
+
+img{
+   
+    margin: 100px;
+    width: 239px;
+    height: 276px;
+    
+
+}
+
+h1 {
+    color: #005792 ;
+    font-size: 70px; 
+  position: relative;
+  top: 30px;
+}
+
+
