@@ -2,12 +2,13 @@
 
 let score=0;
 
-function firstFiveQuest(){
+
 
     alert('welcome to my website');
     let y=prompt('whats your name ?');
     alert ('hello '+ y +' lets start guessing game ;)');
 
+    function firstQuest(){
 let n1 = prompt ('Do I live in Zarqa ?' );
 n1=n1.toLowerCase();
 
@@ -23,8 +24,9 @@ else if (n1 ==='yes' || n1 === 'y'){
 else{
     alert('you should select yes or no !!');
 }
+    }
 
-
+function secondQuest(){
 let n2 = prompt (' Do I like Reading novels?' ).toUpperCase();
 console.log(typeof n2);
 
@@ -40,8 +42,9 @@ else if (n2==='YES'){
 else{
     alert('you should select yes or no !!');
 }
+}
 
-
+function thirdQuest(){
 let n3 = prompt ('Do I have Iphone Mobile ?' );
 n3=n3.toLowerCase();
 console.log(n3);
@@ -58,9 +61,10 @@ else {
     alert('you should select yes or no !!');
 }
 
+}
 
 
-
+function fourthQuest(){
 let n4 = prompt ('Do I Swim Very Well ?' ).toUpperCase();
 
 if (n4==='NO'){
@@ -74,8 +78,9 @@ alert ('Wrong answer')
 else{
     alert('You must get to know me more !!')
 }
+}
 
-
+function fifthQuest(){
 let n5 = prompt ('Do I like The Programming ? ' );
 console.log(n5);
 n5=n5.toLocaleLowerCase();
@@ -148,7 +153,11 @@ for(let index=0 ; index < 6 ; index++){ //attempts
 
 
 
-firstFiveQuest();
+firstQuest();
+secondQuest();
+thirdQuest();
+fourthQuest();
+fifthQuest();
 numberGuess();
 guessCar();
 
